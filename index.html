@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>MAXIMUS $MXM — All weak memes shall be sacrificed</title>
+<meta name="description" content="Maximus — Born in fire. Raised to burn weak tokens. No roadmap. Only destruction. $MXM">
+<style>
+  :root{
+    --bg:#0b0b0d; --panel:#131216; --red:#c0111b; --blood:#9d0009;
+    --text:#e9e9ef; --muted:#9b9aa3; --accent:#f1353d; --ok:#2dd4bf; --warn:#f59e0b;
+  }
+  *{box-sizing:border-box} body{margin:0;background:radial-gradient(1200px 900px at 70% -10%,#1a0b0d 0%,#0b0b0d 45%,#050507 100%);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+  .wrap{max-width:1100px;margin:auto;padding:24px}
+  header{display:flex;gap:18px;align-items:center;margin:10px 0 18px}
+  .logo{width:84px;height:84px;border-radius:50%;background:radial-gradient(70% 70% at 35% 30%,#ef4444 0%,#b1030e 50%,#6b0005 100%);display:grid;place-items:center;box-shadow:0 0 0 2px #22070a, 0 10px 40px #000}
+  /* Simple Spartan/Bull hybrid helmet */
+  svg{width:62px;height:62px}
+  h1{margin:0;font-size:clamp(28px,4.2vw,44px);letter-spacing:.2px}
+  .ticker{color:var(--accent);font-weight:700}
+  .tag{display:inline-flex;gap:8px;align-items:center;background:#16141a;border:1px solid #27252c;color:#d8d7de;padding:6px 10px;border-radius:999px;font-size:13px;margin-right:8px}
+  main{display:grid;gap:18px}
+  .panel{background:linear-gradient(180deg,#131216,#0f0e12);border:1px solid #24222a;border-radius:16px;padding:18px}
+  .hero{display:grid;gap:14px}
+  .hero h2{font-size:clamp(22px,3vw,28px);margin:0 0 2px}
+  .slogan{color:#ff4d57;font-weight:800;letter-spacing:.5px;text-transform:uppercase}
+  .count{display:flex;gap:14px;flex-wrap:wrap}
+  .tile{min-width:86px;background:#111016;border:1px solid #292730;border-radius:12px;text-align:center;padding:10px 12px}
+  .num{font-size:clamp(22px,4.5vw,34px);font-weight:800}
+  .lbl{color:var(--muted);font-size:12px}
+  .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+  .btn{border:1px solid #2b272d;background:#17141b;color:#fff;border-radius:12px;padding:10px 14px;text-decoration:none;font-weight:700}
+  .btn.primary{background:linear-gradient(180deg,var(--red),var(--blood));border-color:#3b0a0e}
+  .btn:hover{filter:brightness(1.1)}
+  .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  h3{margin:.2rem 0 .6rem}
+  ul{margin:.2rem 0 .2rem 1.1rem}
+  small.muted{color:var(--muted)}
+  .mono{font-family: ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;}
+  .copy{cursor:pointer}
+  footer{color:var(--muted);text-align:center;margin:24px 0 10px}
+  .badge{display:inline-block;border:1px solid #2d2a31;background:#14131a;color:#d9d8de;padding:6px 10px;border-radius:9px;margin:4px 6px 0 0;font-size:12px}
+  .badge.good{border-color:#1f3b32;background:#0f1715;color:#d9fffb}
+  .badge.warn{border-color:#4b2a09;background:#1a1206;color:#ffd9a8}
+  .kicker{color:var(--muted);font-weight:600;text-transform:uppercase;font-size:12px;letter-spacing:.14em}
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <div class="logo" aria-hidden="true">
+        <!-- Inline SVG helmet so no external asset needed -->
+        <svg viewBox="0 0 64 64" role="img" aria-label="Maximus Helmet">
+          <path fill="#1c1a21" d="M14 50c2-14 7-22 18-22s16 8 18 22H14z"/>
+          <path fill="#0f0e13" d="M20 50c1-10 5-16 12-16s11 6 12 16H20z"/>
+          <path fill="#000" d="M32 12c9 0 16 5 16 12-8-4-24-4-32 0 0-7 7-12 16-12z"/>
+          <path fill="#060607" d="M16 25c8-3 24-3 32 0v4c-10-3-22-3-32 0v-4z"/>
+          <path fill="#b90412" d="M16 18c5-6 10-8 16-8s11 2 16 8l-6 2c-6-4-14-4-20 0l-6-2z"/>
+        </svg>
+      </div>
+      <div>
+        <h1>MAXIMUS <span class="ticker">$MXM</span></h1>
+        <div>
+          <span class="tag">Born in fire</span>
+          <span class="tag">No roadmap — Only destruction</span>
+          <span class="tag">Solana</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel hero">
+        <div class="kicker">Launch countdown (Toronto)</div>
+        <h2 class="slogan">ALL WEAK MEMES SHALL BE SACRIFICED</h2>
+        <div class="count" id="count">
+          <div class="tile"><div class="num" id="d">–</div><div class="lbl">Days</div></div>
+          <div class="tile"><div class="num" id="h">–</div><div class="lbl">Hours</div></div>
+          <div class="tile"><div class="num" id="m">–</div><div class="lbl">Min</div></div>
+          <div class="tile"><div class="num" id="s">–</div><div class="lbl">Sec</div></div>
+        </div>
+        <div class="btns">
+          <a class="btn primary" href="#" id="dexLink">Buy on DEX (soon)</a>
+          <a class="btn" href="https://twitter.com/MaximusMxm" target="_blank" rel="noopener">Follow on X</a>
+          <a class="btn copy mono" id="copyCA" title="Copy contract address">Copy CA</a>
+        </div>
+        <small class="muted">CA: <span class="mono" id="caPrint">TBA</span></small>
+        <div>
+          <span class="badge good">Minting disabled</span>
+          <span class="badge good">Authority revoked</span>
+          <span class="badge warn">LP locked / burned (at launch)</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="panel">
+          <h3>Tokenomics</h3>
+          <ul>
+            <li>Total supply: <b class="mono">1,000,000,000 MXM</b></li>
+            <li>LP: <b>60%</b> (locked/burned at launch)</li>
+            <li>Community airdrops & growth: <b>20%</b></li>
+            <li>Strategic reserves (multisig): <b>10%</b></li>
+            <li>Staging wallet (ops & listings): <b>10%</b></li>
+          </ul>
+          <small class="muted">Transparent wallets will be published before trading goes live.</small>
+        </div>
+
+        <div class="panel">
+          <h3>Burn Waves</h3>
+          <p>We don’t promise a roadmap — we execute burn waves. Public on-chain, announced on X:</p>
+          <ul>
+            <li>🔥 Wave 1: <b>25M</b> sent to burn (TBA)</li>
+            <li>🔥 Wave 2: <b>25M</b> (TBA)</li>
+            <li>🔥 Wave 3: <b>50M</b> (TBA)</li>
+          </ul>
+          <small class="muted">All burns from a single public burn wallet so everyone can track.</small>
+        </div>
+
+        <div class="panel">
+          <h3>How to buy (quick)</h3>
+          <ol>
+            <li>Install <b>Phantom</b> & fund with <b>SOL</b>.</li>
+            <li>Open our DEX link, import the token (CA below) and swap.</li>
+            <li>Slippage: start low (0.5–1%) then adjust if needed.</li>
+          </ol>
+          <small class="muted">Never send funds to DMs. Only trust links on this site or @MaximusMxm.</small>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h3>Disclaimer</h3>
+        <p>This is a community memecoin on Solana. No financial advice. Crypto is volatile; never invest money you can’t afford to lose.</p>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="yr"></span> MAXIMUS — Born in fire.
+    </footer>
+  </div>
+
+<script>
+  // =======================
+  // CONFIG — EDIT EASILY
+  // =======================
+  const CONFIG = {
+    // Launch time in America/Toronto (YYYY-MM-DD HH:MM:SS)
+    launchLocal: '2025-08-21 13:00:00', // Thu 21 @ 13:00 Toronto
+    // Links (put real link after you create the pool)
+    dexUrl: '#',
+    contractAddress: 'TBA',
+  };
+
+  // Print year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Set links + CA
+  const dexA = document.getElementById('dexLink');
+  if (CONFIG.dexUrl && CONFIG.dexUrl !== '#') dexA.href = CONFIG.dexUrl;
+  document.getElementById('caPrint').textContent = CONFIG.contractAddress;
+
+  // Copy CA button
+  document.getElementById('copyCA').addEventListener('click', async () => {
+    try{
+      await navigator.clipboard.writeText(CONFIG.contractAddress);
+      const b = document.getElementById('copyCA');
+      b.textContent = 'Copied!';
+      setTimeout(()=> b.textContent = 'Copy CA', 1200);
+    }catch(e){ alert('Copy failed. CA: ' + CONFIG.contractAddress); }
+  });
+
+  // Countdown — compute Toronto time robustly
+  function getTorontoTarget(ts){
+    // Build date as if typed in Toronto time, then convert to UTC by offset
+    const parts = ts.replace(' ','T') + '-04:00'; // EDT default; browser will normalize
+    return new Date(parts).getTime();
+  }
+  const target = getTorontoTarget(CONFIG.launchLocal);
+
+  function tick(){
+    const now = Date.now();
+    let diff = Math.max(0, target - now);
+    const d = Math.floor(diff/86400000); diff -= d*86400000;
+    const h = Math.floor(diff/3600000);  diff -= h*3600000;
+    const m = Math.floor(diff/60000);    diff -= m*60000;
+    const s = Math.floor(diff/1000);
+    const pad = n => String(n).padStart(2,'0');
+    document.getElementById('d').textContent = d;
+    document.getElementById('h').textContent = pad(h);
+    document.getElementById('m').textContent = pad(m);
+    document.getElementById('s').textContent = pad(s);
+    if (target - now <= 0){
+      document.querySelector('.slogan').textContent = 'TRADING IS LIVE';
+      dexA.textContent = 'Buy on DEX';
+    }
+  }
+  tick(); setInterval(tick, 1000);
+</script>
+</body>
+</html>
