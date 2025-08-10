@@ -1,172 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>MAXIMUS $MXM — The Bull of the Bull Market</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="MAXIMUS $MXM — ALL WEAK MEMES SHALL BE SACRIFICED. Fair launch. No presale. LP locked/burned at launch. Authority revoked — no mint.">
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="MAXIMUS $MXM — The Bull of the Bull Market">
-  <meta property="og:description" content="ALL WEAK MEMES SHALL BE SACRIFICED.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/hero.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#C41515">
-  <style>
-    :root{
-      --bg:#0b0b0c;
-      --bg2:#131316;
-      --txt:#f1f1f1;
-      --muted:#b9b9be;
-      --accent:#d01919;
-      --chip:#1d1d22;
-      --chip-stroke:#2a2a31;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font:16px/1.5 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Inter,Arial,sans-serif;
-      color:var(--txt); background:radial-gradient(1200px 600px at 70% 10%, #2a0b0b 0%, #0b0b0c 60%) fixed var(--bg);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAXIMUS $MXM | The Bull of the Bull Market</title>
+    <meta name="description" content="MAXIMUS $MXM — ALL WEAK MEMES SHALL BE SACRIFICED. Fair launch. No presale. LP locked/burned at launch.">
+    <meta property="og:title" content="MAXIMUS $MXM | The Bull of the Bull Market">
+    <meta property="og:description" content="MAXIMUS $MXM — ALL WEAK MEMES SHALL BE SACRIFICED.">
+    <meta property="og:image" content="assets/hero.png">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#ff1515">
 
-    /* Hero */
-    .hero{
-      position:relative; min-height:100svh; display:flex; flex-direction:column; justify-content:flex-end;
-      padding:32px clamp(16px,4vw,48px);
-      background:
-        linear-gradient(180deg, rgba(11,11,12,0.05) 0%, rgba(11,11,12,0.65) 65%, rgba(11,11,12,0.95) 100%),
-        url("assets/hero.png") right center/cover no-repeat;
-    }
-    .brand{position:absolute; left:clamp(16px,4vw,48px); top:24px;}
-    .brand h1{
-      margin:0; font-weight:800; letter-spacing:.02em; line-height:1.05;
-      font-size:clamp(22px,4.2vw,44px);
-    }
-    .brand h1 .ticker{color:var(--accent)}
-    .tag{
-      margin:.25rem 0 0; color:var(--muted); font-size:clamp(12px,1.8vw,14px);
-    }
-    .slogan{
-      margin:10svh 0 18px; max-width:28ch;
-      font-weight:900; letter-spacing:.02em; line-height:1.1;
-      font-size:clamp(28px,6vw,64px); color:#ff2a2a; text-transform:uppercase;
-      text-shadow:0 4px 24px rgba(208,25,25,.35);
-    }
-
-    .cta-row{display:flex; gap:12px; flex-wrap:wrap}
-    .btn{
-      appearance:none; border:1px solid #000; background:#d01919; color:#fff; font-weight:700;
-      padding:12px 18px; border-radius:12px; cursor:pointer; transition:transform .08s ease, opacity .2s;
-      box-shadow:0 6px 28px rgba(208,25,25,.35), inset 0 0 0 1px rgba(255,255,255,.08);
-      text-decoration:none; display:inline-flex; align-items:center; justify-content:center;
-    }
-    .btn:hover{transform:translateY(-1px)}
-    .btn.secondary{background:#1d1d22; border-color:#2a2a31; color:#e9e9ee}
-    .btn[aria-disabled="true"]{opacity:.55; cursor:not-allowed}
-
-    /* Info section */
-    .panel{
-      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.0)) , var(--bg2);
-      border:1px solid var(--chip-stroke); border-radius:16px; padding:20px;
-      max-width:980px; margin:28px 0 18px;
-      box-shadow:0 20px 60px rgba(0,0,0,.35);
-    }
-    .panel h2{margin:0 0 10px; font-size:clamp(18px,2.8vw,22px)}
-    .list{margin:0; padding-left:18px}
-    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.95em}
-
-    .solana{
-      display:flex; align-items:center; gap:10px; margin-top:14px; color:var(--muted)
-    }
-    .solana svg{height:22px; width:auto}
-
-    /* Footer small */
-    .foot{opacity:.55; font-size:12px; margin-top:8px}
-
-    /* Copy CA row */
-    .ca{
-      display:flex; gap:8px; flex-wrap:wrap; margin-top:10px
-    }
-    .chip{
-      background:var(--chip); border:1px solid var(--chip-stroke); border-radius:10px; padding:10px 12px;
-      color:#eaeaf1
-    }
-    .copy{padding:10px 12px; border-radius:10px; background:#1f1f24; border:1px solid #2a2a31; color:#eaeaf1}
-    @media (max-width:640px){
-      .hero{background-position:center top}
-      .slogan{max-width:20ch}
-    }
-  </style>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            text-align: center;
+        }
+        .hero {
+            padding: 50px 20px;
+        }
+        .hero img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
 
-  <header class="hero">
-    <div class="brand">
-      <h1>MAXIMUS <span class="ticker">$MXM</span></h1>
-      <div class="tag">The Bull of the Bull Market</div>
+    <!-- Hero section -->
+    <div class="hero">
+        <img src="assets/hero.png" alt="Maximus Bull">
+        <h1>MAXIMUS $MXM</h1>
+        <p>ALL WEAK MEMES SHALL BE SACRIFICED</p>
     </div>
 
-    <h2 class="slogan">ALL WEAK MEMES SHALL BE SACRIFICED</h2>
-
-    <div class="cta-row">
-      <!-- ⚠️ Remplace le lien X ci-dessous par ton compte officiel -->
-      <a class="btn" href="https://x.com/MaximusMxm" target="_blank" rel="noopener">Follow us on X</a>
-      <!-- Lien DEX activé au lancement -->
-      <a class="btn secondary" href="#" aria-disabled="true" title="Available at launch">Buy on DEX (soon)</a>
-    </div>
-
-    <section class="panel" aria-label="Tokenomics">
-      <h2>Tokenomics</h2>
-      <ul class="list">
-        <li><strong>Total supply:</strong> 850,000,000 <span class="mono">$MXM</span></li>
-        <li>Fair launch. No presale.</li>
-        <li>LP locked/burned at launch.</li>
-        <li>Authority revoked — no mint.</li>
-      </ul>
-
-      <!-- Adresse du jeton (à remplir le jour J) -->
-      <div class="ca">
-        <div id="ca" class="chip mono">Contract Address: <span>🟡 TBA</span></div>
-        <button class="copy mono" id="copy" type="button">Copy</button>
-      </div>
-
-      <!-- Logo & mention Solana sous Tokenomics -->
-      <div class="solana" aria-label="Powered on Solana">
-        <!-- Logo Solana (inline SVG, pas de fichier externe) -->
-        <svg viewBox="0 0 398 311" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Solana">
-          <defs>
-            <linearGradient id="g1" x1="0" x2="1" y1="1" y2="0">
-              <stop stop-color="#14F195" offset="0"/>
-              <stop stop-color="#9945FF" offset="1"/>
-            </linearGradient>
-          </defs>
-          <path fill="url(#g1)" d="M64 0h322l-64 64H0zM64 123h322l-64 64H0zM64 246h322l-64 64H0z"/>
-        </svg>
-        <span>Powered on Solana</span>
-      </div>
-
-      <div class="foot">© <span id="y"></span> MAXIMUS — All rights reserved.</div>
-    </section>
-  </header>
-
-  <script>
-    // année dans le footer
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // bouton Copy pour l'adresse (actif quand tu remplaces "TBA" par la vraie adresse)
-    document.getElementById('copy').addEventListener('click', () => {
-      const el = document.getElementById('ca');
-      const text = el.textContent.includes('TBA') ? '' : el.textContent.replace('Contract Address: ','').trim();
-      if(!text){
-        alert('Add the official contract address on launch day, then this button will copy it.');
-        return;
-      }
-      navigator.clipboard.writeText(text).then(()=> {
-        const old = event.target.textContent;
-        event.target.textContent = 'Copied ✓';
-        setTimeout(()=> event.target.textContent = old, 1200);
-      });
-    });
-  </script>
 </body>
 </html>
