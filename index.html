@@ -12,16 +12,31 @@
   *{box-sizing:border-box}
   body{margin:0; font:16px/1.5 Inter,Roboto,Segoe UI,Arial,sans-serif; color:var(--text); background:var(--bg)}
 
-  /* HERO */
-  .hero{
-    position:relative; width:100%; min-height:68vh;
-    background:
-      linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,.55) 55%, rgba(0,0,0,.92) 100%),
-      url('hero.png?v=4') center 20% / cover no-repeat;
+  /* HERO avec image non coupée + overlay + texte par-dessus */
+  .hero{position:relative; width:100%; background:#000;}
+  /* on garde l'image entière (pas de crop) */
+  .hero-img{display:block; width:100%; height:auto;}
+  /* overlay sombre/rouge pour lisibilité du texte */
+  .hero::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,.55) 55%, rgba(0,0,0,.92) 100%);
+    pointer-events:none;
+  }
+  /* tête de taureau en haut à gauche */
+  .stamp{
+    position:absolute; top:14px; left:14px; z-index:3;
+    width:88px; height:88px; border-radius:18px; overflow:hidden;
+    box-shadow:0 8px 28px rgba(0,0,0,.5);
+    background:#120b0b;
+  }
+  .stamp img{display:block; width:100%; height:100%; object-fit:cover;}
+
+  /* bloc texte au centre-bas du visuel */
+  .hero-overlay{
+    position:absolute; inset:0; z-index:2;
     display:flex; align-items:flex-end; justify-content:center;
   }
-  .hero::after{content:""; position:absolute; inset:0; box-shadow:inset 0 -120px 160px rgba(0,0,0,.75)}
-  .hero-inner{position:relative; width:min(1100px,92vw); padding:28px 18px 24px; text-align:center}
+  .hero-inner{width:min(1100px,92vw); padding:28px 18px 24px; text-align:center}
   .muted{color:var(--muted); letter-spacing:.12em}
   .title{
     margin:6px 0 12px; font-weight:900; letter-spacing:.02em; line-height:1.06;
@@ -40,12 +55,11 @@
   .btn[aria-disabled="true"]{opacity:.6; cursor:not-allowed}
   .btn:hover{transform:translateY(-1px)}
 
-  /* PANEL */
+  /* Panneau Tokenomics */
   .panel{
-    width:min(1100px,92vw); margin:-14px auto 36px; padding:22px 22px 26px;
-    background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)), var(--panel);
-    border:1px solid var(--chip-stroke); border-radius:18px;
-    box-shadow:0 28px 80px rgba(0,0,0,.45);
+    width:min(1100px,92vw); margin:-16px auto 40px; padding:22px 22px 26px;
+    background:rgba(20,20,24,.82); backdrop-filter:blur(6px);
+    border:1px solid var(--chip-stroke); border-radius:18px; box-shadow:0 28px 80px rgba(0,0,0,.45);
   }
   .panel h2{margin:0 0 14px; font-size:clamp(22px,3.4vw,28px)}
   .token-list{margin:0; padding-left:22px}
@@ -58,12 +72,20 @@
 <body>
 
 <header class="hero">
-  <div class="hero-inner">
-    <div class="muted">MAXIMUS $MXM</div>
-    <h1 class="title">ALL WEAK MEMES SHALL BE SACRIFICED</h1>
-    <div class="cta">
-      <a class="btn primary" href="#" aria-disabled="true" title="Available at launch">Buy on DEX (soon)</a>
-      <a class="btn secondary" href="https://x.com/MaximusMxm" target="_blank" rel="noopener">Follow on X</a>
+  <!-- image du taureau en entier (aucun crop) -->
+  <img class="hero-img" src="hero.png?v=6" alt="MAXIMUS">
+  <!-- tête en haut à gauche -->
+  <div class="stamp"><img src="bull-head.png" alt=""></div>
+
+  <!-- texte et boutons par-dessus -->
+  <div class="hero-overlay">
+    <div class="hero-inner">
+      <div class="muted">MAXIMUS $MXM</div>
+      <h1 class="title">ALL WEAK MEMES SHALL BE SACRIFICED</h1>
+      <div class="cta">
+        <a class="btn primary" href="#" aria-disabled="true" title="Available at launch">Buy on DEX (soon)</a>
+        <a class="btn secondary" href="https://x.com/MaximusMxm" target="_blank" rel="noopener">Follow on X</a>
+      </div>
     </div>
   </div>
 </header>
