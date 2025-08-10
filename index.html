@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>MAXIMUS $MXM — The Bull of the Bull Market</title>
-<meta name="description" content="MAXIMUS $MXM — ALL WEAK MEMES SHALL BE SACRIFICED. Fair launch. No presale. LP locked/burned at launch. Authority revoked — no mint.">
 <style>
   :root{
     --bg:#0b0b0c; --panel:#141418; --text:#f1f1f1; --muted:#b9b9be; --accent:#d01919;
@@ -13,103 +12,87 @@
   *{box-sizing:border-box}
   body{margin:0; font:16px/1.5 Inter,Roboto,Segoe UI,Arial,sans-serif; color:var(--text); background:var(--bg)}
 
-  /* HERO (image + texte par-dessus) */
+  /* HERO */
   .hero{
-    position:relative; width:100%; min-height:60svh; /* hauteur du bloc image */
+    position:relative; width:100%; min-height:68vh;
     background:
-      linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,.55) 60%, rgba(0,0,0,.85) 100%),
-      url('hero.png') center top / cover no-repeat;
+      linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,.55) 55%, rgba(0,0,0,.92) 100%),
+      url('hero.png?v=4') center 20% / cover no-repeat;
     display:flex; align-items:flex-end; justify-content:center;
   }
-  .hero-inner{
-    width:min(1100px,92vw); padding:32px 18px 28px;
-    text-align:center;
-  }
+  .hero::after{content:""; position:absolute; inset:0; box-shadow:inset 0 -120px 160px rgba(0,0,0,.75)}
+  .hero-inner{position:relative; width:min(1100px,92vw); padding:28px 18px 24px; text-align:center}
+  .muted{color:var(--muted); letter-spacing:.12em}
   .title{
-    margin:0 0 12px; font-weight:900; letter-spacing:.02em; line-height:1.1;
-    font-size:clamp(28px,5.6vw,64px); color:#ff2a2a; text-transform:uppercase;
-    text-shadow:0 6px 26px rgba(208,25,25,.35);
+    margin:6px 0 12px; font-weight:900; letter-spacing:.02em; line-height:1.06;
+    font-size:clamp(32px,6.2vw,68px); color:#ff2a2a; text-transform:uppercase;
+    text-shadow:0 2px 0 rgba(0,0,0,.45), 0 8px 36px rgba(208,25,25,.35);
   }
-  .cta{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:6px}
+  .cta{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:8px}
   .btn{
-    appearance:none; border:1px solid #000; border-radius:12px; padding:12px 18px;
+    appearance:none; border:1px solid #000; border-radius:14px; padding:12px 20px;
     font-weight:700; text-decoration:none; display:inline-flex; align-items:center; justify-content:center;
     box-shadow:0 6px 28px rgba(208,25,25,.35), inset 0 0 0 1px rgba(255,255,255,.08);
     transition:transform .08s ease, opacity .2s ease;
   }
   .btn.primary{background:var(--accent); color:#fff}
-  .btn.secondary{background:#1d1d22; color:#e9e9ee; border-color:#2a2a31}
+  .btn.secondary{background:#1e1e23; color:#e9e9ee; border-color:#2a2a31}
   .btn[aria-disabled="true"]{opacity:.6; cursor:not-allowed}
   .btn:hover{transform:translateY(-1px)}
 
-  /* PANNEAU CONTENU */
+  /* PANEL */
   .panel{
-    width:min(1100px,92vw); margin:-10px auto 36px; padding:22px 18px 26px;
-    background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)) , var(--panel);
-    border:1px solid var(--chip-stroke); border-radius:16px;
-    box-shadow:0 24px 60px rgba(0,0,0,.38);
+    width:min(1100px,92vw); margin:-14px auto 36px; padding:22px 22px 26px;
+    background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)), var(--panel);
+    border:1px solid var(--chip-stroke); border-radius:18px;
+    box-shadow:0 28px 80px rgba(0,0,0,.45);
   }
-  .panel h2{margin:0 0 10px; font-size:clamp(20px,3.2vw,26px)}
-  .token-list{margin:0; padding-left:18px}
-  .muted{color:var(--muted)}
+  .panel h2{margin:0 0 14px; font-size:clamp(22px,3.4vw,28px)}
+  .token-list{margin:0; padding-left:22px}
+  .token-list li{margin:8px 0}
   .solana{display:flex; align-items:center; gap:10px; margin-top:14px; color:var(--muted)}
   .solana svg{height:22px}
-
-  /* petit footer */
   .foot{width:min(1100px,92vw); margin:0 auto 28px; color:#8b8b92; font-size:12px; text-align:center}
 </style>
-  .hero {
-    background: url('hero.png') no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-}
 </head>
 <body>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-inner">
-      <div class="muted" style="letter-spacing:.12em;margin-bottom:6px;">MAXIMUS $MXM</div>
-      <h1 class="title">ALL WEAK MEMES SHALL BE SACRIFICED</h1>
-      <div class="cta">
-        <a class="btn primary" href="#" aria-disabled="true" title="Available at launch">Buy on DEX (soon)</a>
-        <a class="btn secondary" href="https://x.com/MaximusMxm" target="_blank" rel="noopener">Follow on X</a>
-      </div>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="muted">MAXIMUS $MXM</div>
+    <h1 class="title">ALL WEAK MEMES SHALL BE SACRIFICED</h1>
+    <div class="cta">
+      <a class="btn primary" href="#" aria-disabled="true" title="Available at launch">Buy on DEX (soon)</a>
+      <a class="btn secondary" href="https://x.com/MaximusMxm" target="_blank" rel="noopener">Follow on X</a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- CONTENU -->
-  <main class="panel">
-    <h2>Tokenomics</h2>
-    <ul class="token-list">
-      <li><strong>Total supply:</strong> 850,000,000 $MXM</li>
-      <li>Fair launch. No presale.</li>
-      <li>LP locked/burned at launch.</li>
-      <li>Authority revoked — no mint.</li>
-    </ul>
+<main class="panel">
+  <h2>Tokenomics</h2>
+  <ul class="token-list">
+    <li><strong>Total supply:</strong> 850,000,000 $MXM</li>
+    <li>Fair launch. No presale.</li>
+    <li>LP locked/burned at launch.</li>
+    <li>Authority revoked — no mint.</li>
+  </ul>
 
-    <div class="solana" aria-label="Powered on Solana">
-      <!-- Logo Solana inline -->
-      <svg viewBox="0 0 398 311" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Solana">
-        <defs><linearGradient id="g1" x1="0" x2="1" y1="1" y2="0">
-          <stop stop-color="#14F195" offset="0"/><stop stop-color="#9945FF" offset="1"/>
-        </linearGradient></defs>
-        <path fill="url(#g1)" d="M64 0h322l-64 64H0zM64 123h322l-64 64H0zM64 246h322l-64 64H0z"/>
-      </svg>
-      <span>Powered on Solana</span>
-    </div>
+  <div class="solana" aria-label="Powered on Solana">
+    <svg viewBox="0 0 398 311" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Solana">
+      <defs><linearGradient id="g1" x1="0" x2="1" y1="1" y2="0">
+        <stop stop-color="#14F195" offset="0"/><stop stop-color="#9945FF" offset="1"/>
+      </linearGradient></defs>
+      <path fill="url(#g1)" d="M64 0h322l-64 64H0zM64 123h322l-64 64H0zM64 246h322l-64 64H0z"/>
+    </svg>
+    <span>Powered on Solana</span>
+  </div>
 
-    <!-- Adresse contrat (à remplir Jour J) -->
-    <p class="muted" style="margin-top:10px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;">
-      Contract Address: <strong>🟡 TBA</strong>
-    </p>
-  </main>
+  <p style="margin-top:10px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#c7c7cd">
+    Contract Address: <strong>🟡 TBA</strong>
+  </p>
+</main>
 
-  <div class="foot">© <span id="y"></span> MAXIMUS — All rights reserved.</div>
-
-<script>
-  document.getElementById('y').textContent = new Date().getFullYear();
-</script>
+<div class="foot">© <span id="y"></span> MAXIMUS — All rights reserved.</div>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
